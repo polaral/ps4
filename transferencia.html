@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulário de Transferência de Paciente </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .formulario {               
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        label{
+            display: flex;
+        }
+
+        select,
+        input[type="date"],
+        input[type="text"],
+        input[type="time"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .agendamentos {
+            text-align: left;
+            margin-top: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+ <!-- Google Font: Source Sans Pro -->
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+ <!-- Font Awesome -->
+ <link rel="stylesheet" href="plugins/fontawesome-free/css/all.css">
+ <!-- Ionicons -->
+ <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+ <!-- Tempusdominus Bootstrap 4 -->
+ <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.css">
+ <!-- iCheck -->
+ <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.css">
+ <!-- JQVMap -->
+ <link rel="stylesheet" href="plugins/jqvmap/jqvmap.css">
+ <!-- Theme style -->
+ <link rel="stylesheet" href="dist/css/adminlte.css">
+ <!-- overlayScrollbars -->
+ <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.css">
+ <!-- Daterange picker -->
+ <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+ <!-- summernote -->
+ <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
+
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper"> 
+<!-- Navbar -->
+<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+  <!-- Left navbar links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+    </li>
+    <li class="nav-item d-none d-sm-inline-block">
+      <a href="index.html" class="nav-link">Home</a>
+    </li>
+    <li class="nav-item d-none d-sm-inline-block">
+      <a href="#" class="nav-link">Contato</a>
+    </li>
+  </ul>
+</nav>
+<!-- /.navbar -->
+
+<!-- Main Sidebar Container -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <!-- Brand Logo -->
+  <a href="index.html" class="brand-link">
+    <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+    <span class="brand-text font-weight-light">PS</span>
+  </a>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <!-- SidebarSearch Form -->
+    <div class="form-inline mt-3 pb-3 mb-3 d-flex">
+      <div class="input-group" data-widget="sidebar-search">
+        <input class="form-control form-control-sidebar" type="search" placeholder="Pesquisar" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-sidebar">
+            <i class="fas fa-search fa-fw"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+ <!-- Sidebar -->
+ <div class="sidebar">
+
+    <!-- Sidebar Menu -->
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <!-- Add icons to the links using the .nav-icon class
+             with font-awesome or any other icon font library -->
+        <li class="nav-item">
+          <a href="agendamento.html" class="nav-link">
+            <i class="nav-icon far fa-calendar-alt"></i>
+           
+            
+            <p>
+              Agendamento
+              <span class="badge badge-info right"></span>
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="cadastro.html" class="nav-link">
+            <i class="nav-icon far fa-calendar-alt"></i>
+            <p>
+              Cadastro
+              <span class="badge badge-info right"></span>
+            </p>
+          </a>
+        </li>    
+        <li class="nav-item">
+          <a href="transferencia.html" class="nav-link">
+            <i class="nav-icon far fa-calendar-alt"></i>
+            <p>
+              Transferência
+              <spam class="badge badge-info right"></spam>
+            </p>
+          </a>
+        </li>
+            </p>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.sidebar-menu -->
+  </div>    
+</aside>
+<!-- /.control-sidebar -->
+</div>
+</body>
+    <div class="formulario">
+        <h1>Formulário de Transferência de Paciente</h1>
+        <form action="processar_transferencia.php" method="post">
+            <label for="nome_paciente">Nome do Paciente:</label>
+            <input type="text" id="nome_paciente" name="nome_paciente" required>
+
+            <label for="idade_paciente">Data de Nascimento do Paciente:</label>
+            <input type="date" id="idade_paciente" name="idade_paciente" required>
+
+            <label for="cartao_sus">Número do Cartão SUS:</label>
+            <input type="text" id="cartao_sus" name="cartao_sus" pattern="[0-15]*" title="Somente números são permitidos no Cartão SUS." required>
+
+            <label for="unidade_origem">Unidade de Saúde de Origem:</label>
+            <select id="unidade_origem" name="unidade_origem" required>
+                <option value="unidade1">Unidade de Saúde 1</option>
+                <option value="unidade2">Unidade de Saúde 2</option>
+                <option value="unidade3">Unidade de Saúde 3</option>
+            </select>
+
+            <label for="unidade_destino">Unidade de Saúde de Destino:</label>
+            <select id="unidade_destino" name="unidade_destino" required>
+                <option value="unidadeA">Unidade de Saúde A</option>
+                <option value="unidadeB">Unidade de Saúde B</option>
+                <option value="unidadeC">Unidade de Saúde C</option>
+            </select>
+
+            <label for="data_transferencia">Data da Transferência:</label>
+            <input type="date" id="data_transferencia" name="data_transferencia" required>
+
+            <label for="motivo_transferencia">Motivo da Transferência:</label>
+            <textarea id="motivo_transferencia" name="motivo_transferencia" required></textarea>
+
+            <div class="button-container">
+                <button type="submit">Enviar</button>
+                <button type="button" onclick="window.history.back();">Voltar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

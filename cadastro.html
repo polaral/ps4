@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu cartao sus</title>
+    <style>
+      
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        select,
+        input[type="text"],
+        input[type="number"],
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        #cartaoSusField {
+            display: block;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        @media (min-width: 768px) {
+            /* Estilos para telas maiores que 768px (tablets e desktops) */
+            .container {
+                max-width: 600px;
+                margin: 0 auto;
+                
+            }
+            
+        }
+    </style>
+ <!-- Google Font: Source Sans Pro -->
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+ <!-- Font Awesome -->
+ <link rel="stylesheet" href="plugins/fontawesome-free/css/all.css">
+ <!-- Ionicons -->
+ <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+ <!-- Tempusdominus Bootstrap 4 -->
+ <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.css">
+ <!-- iCheck -->
+ <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.css">
+ <!-- JQVMap -->
+ <link rel="stylesheet" href="plugins/jqvmap/jqvmap.css">
+ <!-- Theme style -->
+ <link rel="stylesheet" href="dist/css/adminlte.css">
+ <!-- overlayScrollbars -->
+ <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.css">
+ <!-- Daterange picker -->
+ <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+ <!-- summernote -->
+ <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
+
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper"> 
+<!-- Navbar -->
+<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+  <!-- Left navbar links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+    </li>
+    <li class="nav-item d-none d-sm-inline-block">
+      <a href="index.html" class="nav-link">Home</a>
+    </li>
+    <li class="nav-item d-none d-sm-inline-block">
+      <a href="#" class="nav-link">Contato</a>
+    </li>
+  </ul>
+</nav>
+<!-- /.navbar -->
+
+<!-- Main Sidebar Container -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <!-- Brand Logo -->
+  <a href="index.html" class="brand-link">
+    <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+    <span class="brand-text font-weight-light">PS</span>
+  </a>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <!-- SidebarSearch Form -->
+    <div class="form-inline mt-3 pb-3 mb-3 d-flex">
+      <div class="input-group" data-widget="sidebar-search">
+        <input class="form-control form-control-sidebar" type="search" placeholder="Pesquisar" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-sidebar">
+            <i class="fas fa-search fa-fw"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+ <!-- Sidebar -->
+ <div class="sidebar">
+
+    <!-- Sidebar Menu -->
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <!-- Add icons to the links using the .nav-icon class
+             with font-awesome or any other icon font library -->
+        <li class="nav-item">
+          <a href="agendamento.html" class="nav-link">
+            <i class="nav-icon far fa-calendar-alt"></i>
+           
+            
+            <p>
+              Agendamento
+              <span class="badge badge-info right"></span>
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="cadastro.html" class="nav-link">
+            <i class="nav-icon far fa-calendar-alt"></i>
+            <p>
+              Cadastro
+              <span class="badge badge-info right"></span>
+            </p>
+          </a>
+        </li>    
+        <li class="nav-item">
+          <a href="transferencia.html" class="nav-link">
+            <i class="nav-icon far fa-calendar-alt"></i>
+            <p>
+              Transferência
+              <spam class="badge badge-info right"></spam>
+            </p>
+          </a>
+        </li>
+            </p>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.sidebar-menu -->
+  </div>    
+</aside>
+<!-- /.control-sidebar -->
+</div>
+</body>
+    <div class="container">
+        <h2>Cadastro</h2>
+        <form>
+            <select id="tipoCadastro" name="tipoCadastro" required>
+                <option value="" disabled selected>Escolha o tipo de cadastro</option>
+                <option value="usuario">Usuário</option>
+                <option value="profissional">Profissional</option>
+            </select>
+            <input type="text" placeholder="Nome" required>
+            <input type="number" placeholder="CPF" required>
+            <input type="text" placeholder="Cidade" required>
+            <input type="text" placeholder="Bairro" required>
+            <input type="text" placeholder="Posto de Saúde" required>
+            <input type="number" placeholder="Idade" required>
+            <input type="text" id="cartaoSusField" placeholder="Cartão SUS" required>
+            <input type="date" placeholder="Data de Nascimento" required>
+            <button type="submit">Cadastrar</button>
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Botão para Voltar</title>
+            </head>
+            <body>
+                <button onclick="history.back()">Voltar para a Página Anterior</button>
+            </body>
+            </html>
+            
+            
+        </form>
+    </div>
+
+    <script>
+        const tipoCadastroSelect = document.getElementById("tipoCadastro");
+        const cartaoSusField = document.getElementById("cartaoSusField");
+
+        // Adicionar um ouvinte de evento de mudança para o campo "tipoCadastro"
+        tipoCadastroSelect.addEventListener("change", function () {
+            if (tipoCadastroSelect.value === "profissional") {
+                cartaoSusField.style.display = "none"; // Oculta o campo "Cartão SUS"
+            } else {
+                cartaoSusField.style.display = "block"; // Exibe o campo "Cartão SUS"
+            }
+        });
+    </script>
+</body>
+</html>
